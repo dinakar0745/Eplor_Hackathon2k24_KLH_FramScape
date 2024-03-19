@@ -1,0 +1,294 @@
+[
+    {
+        "id": "61e99a07ab061b8e",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d6df34d5c66f5dd2",
+        "type": "rpi-gpio in",
+        "z": "61e99a07ab061b8e",
+        "name": "",
+        "pin": "2",
+        "intype": "tri",
+        "debounce": "25",
+        "read": true,
+        "bcm": true,
+        "x": 230,
+        "y": 400,
+        "wires": [
+            [
+                "f550982b63f43278",
+                "15bb815caca75c3b"
+            ]
+        ]
+    },
+    {
+        "id": "1edfefc9cea97bda",
+        "type": "rpi-gpio in",
+        "z": "61e99a07ab061b8e",
+        "name": "",
+        "pin": "3",
+        "intype": "tri",
+        "debounce": "25",
+        "read": true,
+        "bcm": true,
+        "x": 230,
+        "y": 480,
+        "wires": [
+            [
+                "e42578a3db496f9a"
+            ]
+        ]
+    },
+    {
+        "id": "39c092086a8a4a6d",
+        "type": "rpi-srf",
+        "z": "61e99a07ab061b8e",
+        "name": "",
+        "topic": "SRF",
+        "pulse": "0.5",
+        "pins": "8,10",
+        "precision": "0",
+        "x": 610,
+        "y": 580,
+        "wires": [
+            [
+                "c439764791d49d0b"
+            ]
+        ]
+    },
+    {
+        "id": "0b4454d26780aa39",
+        "type": "ui_template",
+        "z": "61e99a07ab061b8e",
+        "group": "67a9c3e2dd809b54",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    body {\n        background-image: url(\"/home/pi/Downloads/424719-agriculture-wallpaper-3946850590.jpg\"); // file path\n        background-repeat: no-repeat;\n        background-size: auto;\n        background-position: bottom left;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "className": "",
+        "x": 440,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "15bb815caca75c3b",
+        "type": "ui_gauge",
+        "z": "61e99a07ab061b8e",
+        "name": "",
+        "group": "fd51f3c968228634",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "STATUS",
+        "label": "RAIN",
+        "format": "",
+        "min": "1",
+        "max": "0",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 600,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "e42578a3db496f9a",
+        "type": "ui_gauge",
+        "z": "61e99a07ab061b8e",
+        "name": "",
+        "group": "67a9c3e2dd809b54",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "STATUS",
+        "label": "MOISTURE",
+        "format": "",
+        "min": "1",
+        "max": "0",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 600,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "5205203a74bb3eb9",
+        "type": "ui_toast",
+        "z": "61e99a07ab061b8e",
+        "position": "dialog",
+        "displayTime": "10",
+        "highlight": "RED",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "IT HAS BEEN RAINING FOR A LONG TIME IN YOUR FARM",
+        "name": "RAINING ALERT",
+        "x": 1000,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c8948364d47e61f2",
+        "type": "delaytimer",
+        "z": "61e99a07ab061b8e",
+        "delay1": "600",
+        "delay2": "",
+        "durationType": "num",
+        "units": "Second",
+        "payloadtype": "num",
+        "payloadval": "1",
+        "name": "",
+        "x": 610,
+        "y": 300,
+        "wires": [
+            [
+                "0724381c1c36d6ab"
+            ]
+        ]
+    },
+    {
+        "id": "f550982b63f43278",
+        "type": "function",
+        "z": "61e99a07ab061b8e",
+        "name": "function 6",
+        "func": "var a=msg.payload;\nif (a==1)\n{\n    return 1;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 320,
+        "wires": [
+            [
+                "c8948364d47e61f2"
+            ]
+        ]
+    },
+    {
+        "id": "0724381c1c36d6ab",
+        "type": "function",
+        "z": "61e99a07ab061b8e",
+        "name": "function 7",
+        "func": "var a=msg.payload;\nif (a==1)\n{\n    return 1;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 280,
+        "wires": [
+            [
+                "5205203a74bb3eb9"
+            ]
+        ]
+    },
+    {
+        "id": "f320028b436e938c",
+        "type": "rpi-gpio out",
+        "z": "61e99a07ab061b8e",
+        "name": "",
+        "pin": "4",
+        "set": "",
+        "level": "0",
+        "freq": "50",
+        "out": "pwm",
+        "bcm": true,
+        "x": 960,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "c439764791d49d0b",
+        "type": "ui_gauge",
+        "z": "61e99a07ab061b8e",
+        "name": "",
+        "group": "67a9c3e2dd809b54",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "200",
+        "max": "0",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 910,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "67a9c3e2dd809b54",
+        "type": "ui_group",
+        "name": "DISTANCE",
+        "tab": "a91a32883bc7245a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "fd51f3c968228634",
+        "type": "ui_group",
+        "name": "RAIN",
+        "tab": "a91a32883bc7245a",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a91a32883bc7245a",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

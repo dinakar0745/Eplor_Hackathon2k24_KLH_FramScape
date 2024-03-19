@@ -1,0 +1,327 @@
+[
+    {
+        "id": "11a7162af4a4de03",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "96b8187fbee89216",
+        "type": "inject",
+        "z": "11a7162af4a4de03",
+        "name": "4",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "4",
+        "payloadType": "num",
+        "x": 310,
+        "y": 160,
+        "wires": [
+            [
+                "c9a386047159b58e"
+            ]
+        ]
+    },
+    {
+        "id": "0662279b0f938830",
+        "type": "inject",
+        "z": "11a7162af4a4de03",
+        "name": "8",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "8",
+        "payloadType": "num",
+        "x": 310,
+        "y": 220,
+        "wires": [
+            [
+                "c9a386047159b58e"
+            ]
+        ]
+    },
+    {
+        "id": "c9a386047159b58e",
+        "type": "rpi-gpio out",
+        "z": "11a7162af4a4de03",
+        "name": "",
+        "pin": "4",
+        "set": "",
+        "level": "0",
+        "freq": "50",
+        "out": "pwm",
+        "bcm": true,
+        "x": 540,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "f227f36bdcc2fdf7",
+        "type": "inject",
+        "z": "11a7162af4a4de03",
+        "name": "1",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 310,
+        "y": 100,
+        "wires": [
+            [
+                "c9a386047159b58e"
+            ]
+        ]
+    },
+    {
+        "id": "37902faf4d5c6550",
+        "type": "rpi-srf",
+        "z": "11a7162af4a4de03",
+        "name": "",
+        "topic": "SRF",
+        "pulse": "0.5",
+        "pins": "8,10",
+        "precision": "0",
+        "x": 250,
+        "y": 360,
+        "wires": [
+            [
+                "2d5b0620526c7bfb",
+                "b3dea051648d3f0c",
+                "eb96599c074f5081"
+            ]
+        ]
+    },
+    {
+        "id": "2d5b0620526c7bfb",
+        "type": "debug",
+        "z": "11a7162af4a4de03",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 560,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "b3dea051648d3f0c",
+        "type": "function",
+        "z": "11a7162af4a4de03",
+        "name": "function 1",
+        "func": "var d=msg.payload;\nif (d<30)\n{\n    return {payload: 1};\n}\nelse\n{\n    return {payload: 9};\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 480,
+        "wires": [
+            [
+                "762914e49ad35afe"
+            ]
+        ]
+    },
+    {
+        "id": "762914e49ad35afe",
+        "type": "rpi-gpio out",
+        "z": "11a7162af4a4de03",
+        "name": "",
+        "pin": "17",
+        "set": "",
+        "level": "0",
+        "freq": "50",
+        "out": "pwm",
+        "bcm": true,
+        "x": 720,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "5feecb0f2c7c0f03",
+        "type": "function",
+        "z": "11a7162af4a4de03",
+        "name": "function 2",
+        "func": "var m=msg.payload;\n\nif (m==1)\n{\n    return {payload: 1}\n}\nelse if (m==0)\n{\n    return {payload: 7}\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 560,
+        "wires": [
+            [
+                "8e4878c2708b2e2c",
+                "e3df06db1709015d"
+            ]
+        ]
+    },
+    {
+        "id": "c76829eee933031c",
+        "type": "rpi-gpio in",
+        "z": "11a7162af4a4de03",
+        "name": "",
+        "pin": "20",
+        "intype": "tri",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 130,
+        "y": 480,
+        "wires": [
+            [
+                "5feecb0f2c7c0f03"
+            ]
+        ]
+    },
+    {
+        "id": "eb96599c074f5081",
+        "type": "function",
+        "z": "11a7162af4a4de03",
+        "name": "function 3",
+        "func": "var x=msg.payload;\nif (x>=30)\n{\n    return 4;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 300,
+        "wires": [
+            [
+                "6ab40f8357006fc4"
+            ]
+        ]
+    },
+    {
+        "id": "6ab40f8357006fc4",
+        "type": "delaytimer",
+        "z": "11a7162af4a4de03",
+        "delay1": "5",
+        "delay2": "0",
+        "durationType": "num",
+        "units": "Second",
+        "payloadtype": "num",
+        "payloadval": "7",
+        "name": "",
+        "x": 740,
+        "y": 320,
+        "wires": [
+            [
+                "c9a386047159b58e"
+            ]
+        ]
+    },
+    {
+        "id": "e3df06db1709015d",
+        "type": "function",
+        "z": "11a7162af4a4de03",
+        "name": "function 4",
+        "func": "var x=msg.payload;\nif(x==1)\n{\n    return {payload: 1};\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 580,
+        "wires": [
+            [
+                "b7bb87d3b93943b7"
+            ]
+        ]
+    },
+    {
+        "id": "8e4878c2708b2e2c",
+        "type": "function",
+        "z": "11a7162af4a4de03",
+        "name": "function 5",
+        "func": "var x=msg.payload;\nif(x==4)\n{\n    return {payload: 4};\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 660,
+        "wires": [
+            [
+                "bb314354e0fa2d81"
+            ]
+        ]
+    },
+    {
+        "id": "b7bb87d3b93943b7",
+        "type": "delaytimer",
+        "z": "11a7162af4a4de03",
+        "delay1": "5",
+        "delay2": "0",
+        "durationType": "num",
+        "units": "Second",
+        "payloadtype": "num",
+        "payloadval": "1",
+        "name": "",
+        "x": 660,
+        "y": 580,
+        "wires": [
+            [
+                "c9a386047159b58e"
+            ]
+        ]
+    },
+    {
+        "id": "bb314354e0fa2d81",
+        "type": "delaytimer",
+        "z": "11a7162af4a4de03",
+        "delay1": "5",
+        "delay2": "0",
+        "durationType": "num",
+        "units": "Second",
+        "payloadtype": "num",
+        "payloadval": "7",
+        "name": "",
+        "x": 640,
+        "y": 660,
+        "wires": [
+            [
+                "c9a386047159b58e"
+            ]
+        ]
+    }
+]
