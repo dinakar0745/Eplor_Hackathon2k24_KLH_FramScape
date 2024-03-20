@@ -39,7 +39,7 @@ FarmScapes is a project dedicated to automating farming processes, aimed at stre
 
   [diseases](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset)
 
-  [weed](https://www.kaggle.com/datasets/vinayakshanawad/weedcrop-image-dataset).
+  [weed](https://www.kaggle.com/datasets/vinayakshanawad/weedcrop-image-dataset)
 
   The codes used for training the models can be found in the Model Generation directory [Click here](https://github.com/dinakar0745/Eplor_Hackathon2k24_KLH_FramScape/tree/main/Model%20Generation).
 
