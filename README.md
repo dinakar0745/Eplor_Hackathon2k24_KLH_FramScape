@@ -20,7 +20,7 @@ FarmScapes is a project dedicated to automating farming processes, aimed at stre
 - [JSON](https://www.json.org/json-en.html)
 - [TensorFlow](https://www.tensorflow.org/)
 - [Python](https://www.python.org/)
-- [OpenCV](https://opencv.org/]
+- [OpenCV](https://opencv.org/)
 - [Raspberry Pi](https://www.raspberrypi.com/)
 - [Arduino](https://www.arduino.cc/)
 - [HTML/CSS](https://en.wikipedia.org/wiki/HTML)
