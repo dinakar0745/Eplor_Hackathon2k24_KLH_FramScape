@@ -34,10 +34,13 @@ FarmScapes is a project dedicated to automating farming processes, aimed at stre
 - Arduino Uno (planned for future expansion)
 
   The codes behind the farmer's dashboard and all the working of IOT componenets can be found in the Raspberrypi directory[Click here](https://github.com/dinakar0745/Eplor_Hackathon2k24_KLH_FramScape/tree/main/Raspberrypi) to access.
+
   DATASET can be downloaded from the following links:
   [diseases](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset).
   [weed](https://www.kaggle.com/datasets/vinayakshanawad/weedcrop-image-dataset).
+
   The codes used for training the models can be found in the Model Generation directory [Click here](https://github.com/dinakar0745/Eplor_Hackathon2k24_KLH_FramScape/tree/main/Model%20Generation).
+
   The trained models can be used to compare with the live data captured by running the python codes we have given in detection directory[Click here](https://github.com/dinakar0745/Eplor_Hackathon2k24_KLH_FramScape/tree/main/detection).
 For the models used in the project, please visit this [link](https://drive.google.com/drive/folders/1oDF3-2sQ_iRsZp4q76z0WoWyuMQdT_Df?usp=sharing).
 
