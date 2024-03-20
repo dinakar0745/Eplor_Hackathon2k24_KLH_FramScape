@@ -33,7 +33,7 @@ FarmScapes is a project dedicated to automating farming processes, aimed at stre
 - Ultrasonic Distance Sensor Module
 - Arduino Uno (planned for future expansion)
 
-  The codes behind the farmer's dashboard and all the working of IOT componenets can be found in the Raspberrypi directory[Click here](https://github.com/dinakar0745/Eplor_Hackathon2k24_KLH_FramScape/tree/main/Raspberrypi) to access.
+  The codes behind the farmer's dashboard and all the working of IOT componenets can be found in the Raspberrypi directory [Click here](https://github.com/dinakar0745/Eplor_Hackathon2k24_KLH_FramScape/tree/main/Raspberrypi).
 
   DATASET can be downloaded from the following links:
   [diseases](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset).
