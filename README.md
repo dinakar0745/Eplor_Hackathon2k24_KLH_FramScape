@@ -24,7 +24,7 @@ Software Components:
 - [Raspberry Pi](https://www.raspberrypi.com/)
 - [Arduino](https://www.arduino.cc/)
 - [HTML/CSS](https://en.wikipedia.org/wiki/HTML)
-Hardware Components:
+ Hardware Components:
 - Raspberry Pi
 - Soil Moisture Sensor
 - Relay Module
