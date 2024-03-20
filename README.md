@@ -36,7 +36,9 @@ FarmScapes is a project dedicated to automating farming processes, aimed at stre
   The codes behind the farmer's dashboard and the working of all the IOT componenets can be found in the Raspberrypi directory [Click here](https://github.com/dinakar0745/Eplor_Hackathon2k24_KLH_FramScape/tree/main/Raspberrypi).
 
   DATASET can be downloaded from the following links:
-  [diseases](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset).
+
+  [diseases](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset)
+
   [weed](https://www.kaggle.com/datasets/vinayakshanawad/weedcrop-image-dataset).
 
   The codes used for training the models can be found in the Model Generation directory [Click here](https://github.com/dinakar0745/Eplor_Hackathon2k24_KLH_FramScape/tree/main/Model%20Generation).
