@@ -15,7 +15,7 @@ FarmScapes is a project dedicated to automating farming processes, aimed at stre
 - [Ch Naga Teja](https://www.linkedin.com/in/teja-ch-994ab92b7/)
 
 ## Technologies Used
-
+Software Components:
 - [Node-RED](https://nodered.org/)
 - [JSON](https://www.json.org/json-en.html)
 - [TensorFlow](https://www.tensorflow.org/)
@@ -24,7 +24,7 @@ FarmScapes is a project dedicated to automating farming processes, aimed at stre
 - [Raspberry Pi](https://www.raspberrypi.com/)
 - [Arduino](https://www.arduino.cc/)
 - [HTML/CSS](https://en.wikipedia.org/wiki/HTML)
-- Hardware Components
+Hardware Components:
 - Raspberry Pi
 - Soil Moisture Sensor
 - Relay Module
