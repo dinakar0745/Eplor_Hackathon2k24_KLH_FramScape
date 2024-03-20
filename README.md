@@ -12,7 +12,7 @@ FarmScapes is a project dedicated to automating farming processes, aimed at stre
 - [Dinakar Pathakota](https://www.linkedin.com/in/dinakar-pathakota-32a823251/)
 - [A. Sriram](https://www.linkedin.com/in/shreeram59/)
 - [N. Varun](https://www.linkedin.com/in/naralasetty-varun-1579a6259/)
-- Ch Naga Teja
+- [Ch Naga Teja](https://www.linkedin.com/in/teja-ch-994ab92b7/)
 
 ## Technologies Used
 
