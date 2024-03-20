@@ -21,7 +21,7 @@ FarmScapes is a project dedicated to automating farming processes, aimed at stre
 - TensorFlow
 - Python
 - OpenCV
-- Raspberry Piio
+- Raspberry Pi
 - Arduino
 - HTML/CSS
 - Hardware Components
