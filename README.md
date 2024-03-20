@@ -41,7 +41,8 @@ FarmScapes is a project dedicated to automating farming processes, aimed at stre
 
   The codes used for training the models can be found in the Model Generation directory [Click here](https://github.com/dinakar0745/Eplor_Hackathon2k24_KLH_FramScape/tree/main/Model%20Generation).
 
-  The trained models can be used to compare with the live data captured by running the python codes we have given in detection directory[Click here](https://github.com/dinakar0745/Eplor_Hackathon2k24_KLH_FramScape/tree/main/detection).
-For the models used in the project, please visit this [link](https://drive.google.com/drive/folders/1oDF3-2sQ_iRsZp4q76z0WoWyuMQdT_Df?usp=sharing).
+  The trained models can be used to compare with the live data captured by running the python codes we have given in detection directory [Click here](https://github.com/dinakar0745/Eplor_Hackathon2k24_KLH_FramScape/tree/main/detection).
 
-FarmScapes aims to enhance farming efficiency and accessibility, thereby contributing to agricultural sustainability and food security.
+For the trained models used in the project, please visit this [link](https://drive.google.com/drive/folders/1oDF3-2sQ_iRsZp4q76z0WoWyuMQdT_Df?usp=sharing).
+
+FarmScapes aims to enhance farming efficiency and accessibility along with increasing the number of people willing to farm by increasing the comfort in farming, thereby contributing to agricultural sustainability and food security.
